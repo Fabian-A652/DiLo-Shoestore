@@ -17,6 +17,25 @@
             padding: 10px 20px;
             text-align: center;
         }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
         .container {
             width: 80%;
             margin: auto;
@@ -58,6 +77,41 @@
             bottom: 0;
             width: 100%;
         }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+        section {
+            margin: 20px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 5px 0;
+        }
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -67,9 +121,19 @@
             <p>La mejor selección de tenis y zapatos para ti</p>
         </div>
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#carousel">Destacados</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#subscribe">Suscripción</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <section class="products">
+        <section id="products" class="products">
             <div class="product">
                 <img src="imagen-producto1.jpg" alt="Tenis Modelo 1">
                 <h3>Tenis Modelo 1</h3>
@@ -84,10 +148,9 @@
             </div>
             <!-- Añade más productos aquí -->
         </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 DiLo Shoestore. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+        <section id="carousel">
+            <h2>Productos Destacados</h2>
+            <div class="carousel">
+                <img src="imagen-destacada1.jpg" alt="Producto Destacado 1">
+                <
